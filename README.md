@@ -1,2 +1,2 @@
 # learning_files
-This is a repository for stage of learning. Wish it will victim my improvement.
+This is a repository for stage of learning. Wish it will witness my improvement.
