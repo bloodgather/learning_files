@@ -1,0 +1,4 @@
+﻿  task8_2_2.cpp
+D:\常用\出国\coursera\计算导论和C语言基础\作业\Project8_2_2\Project8_2_2\task8_2_2.cpp(14,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\常用\出国\coursera\计算导论和C语言基础\作业\Project8_2_2\Project8_2_2\task8_2_2.cpp(15,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Project8_2_2.vcxproj -> D:\常用\出国\coursera\计算导论和C语言基础\作业\Project8_2_2\Debug\Project8_2_2.exe

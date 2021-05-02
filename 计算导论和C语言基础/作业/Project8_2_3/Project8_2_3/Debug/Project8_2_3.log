@@ -1,0 +1,3 @@
+﻿  task8_2_3.cpp
+D:\常用\出国\coursera\计算导论和C语言基础\作业\Project8_2_3\Project8_2_3\task8_2_3.cpp(20,28): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+  Project8_2_3.vcxproj -> D:\常用\出国\coursera\计算导论和C语言基础\作业\Project8_2_3\Debug\Project8_2_3.exe
