@@ -1,0 +1,3 @@
+﻿  task6_2_2.cpp
+D:\常用\出国\coursera\计算导论和C语言基础\作业\Project6_2_2\Project6_2_2\task6_2_2.cpp(8,26): warning C4305: “初始化”: 从“double”到“float”截断
+  Project6_2_2.vcxproj -> D:\常用\出国\coursera\计算导论和C语言基础\作业\Project6_2_2\Debug\Project6_2_2.exe
