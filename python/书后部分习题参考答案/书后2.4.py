@@ -1,0 +1,20 @@
+import math
+r="http://sports.sina.com.cn/"
+s1=r.count('t')
+print(s1)
+s2=r.find('com')
+print(s2)
+s3=r.replace(".","-")
+print(s3)
+s=r.find('sports')
+print(s)
+s4=r[s:s+6]
+print(s4)
+ss=r.rindex('sina')
+print(ss)
+s5=r[ss:ss+4]
+print(s5)
+sss=len(r)
+print(sss)
+s6=r[ss-sss-1+4:ss-sss-1:-1]
+print(s6)
