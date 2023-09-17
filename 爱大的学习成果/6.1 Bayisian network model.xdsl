@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Total_Liability">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.65 0.35</probabilities>
+		</cpt>
+		<cpt id="Total_Assets">
+			<state id="Poor" />
+			<state id="Wealthy" />
+			<probabilities>0.33 0.6699999999999999</probabilities>
+		</cpt>
+		<cpt id="Debt_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Total_Liability Total_Assets</parents>
+			<probabilities>0.26 0.74 0.98 0.02 0.02 0.98 0.26 0.74</probabilities>
+		</cpt>
+		<cpt id="Revenue">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Cash_Flow">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.21 0.79</probabilities>
+		</cpt>
+		<cpt id="Current_Asset">
+			<state id="Poor" />
+			<state id="Wealthy" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Current_Liability">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.65 0.35</probabilities>
+		</cpt>
+		<cpt id="Current_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Current_Asset Current_Liability</parents>
+			<probabilities>0.26 0.74 0.98 0.02 0.02 0.98 0.26 0.74</probabilities>
+		</cpt>
+		<cpt id="Liquid_Assets">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.33 0.6699999999999999</probabilities>
+		</cpt>
+		<cpt id="Quick_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Current_Liability Liquid_Assets</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Payable">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.22 0.78</probabilities>
+		</cpt>
+		<cpt id="Equity">
+			<state id="Poor" />
+			<state id="Wealthy" />
+			<probabilities>0.49 0.51</probabilities>
+		</cpt>
+		<cpt id="EBIT">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.54 0.46</probabilities>
+		</cpt>
+		<cpt id="Interest_Expense">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.32 0.6799999999999999</probabilities>
+		</cpt>
+		<cpt id="Net_Income">
+			<state id="Low" />
+			<state id="High" />
+			<parents>EBIT Interest_Expense</parents>
+			<probabilities>0.98 0.02 0.26 0.74 0.26 0.74 0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="ROA">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Total_Assets Net_Income</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="ROE">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Net_Income Equity</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Profit">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Profit_Margin">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Revenue Profit</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Cash_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Current_Liability Cash_Flow</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Interest_Coverage_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>EBIT Interest_Expense</parents>
+			<probabilities>0.26 0.74 0.98 0.02 0.02 0.98 0.26 0.74</probabilities>
+		</cpt>
+		<cpt id="Cost_of_Sales">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.11 0.89</probabilities>
+		</cpt>
+		<cpt id="Inventory">
+			<state id="Poor" />
+			<state id="Wealthy" />
+			<probabilities>0.19 0.8100000000000001</probabilities>
+		</cpt>
+		<cpt id="Inventory_Turnover_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Inventory Cost_of_Sales</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Net_Credit_Purchases">
+			<state id="Low" />
+			<state id="High" />
+			<probabilities>0.35 0.65</probabilities>
+		</cpt>
+		<cpt id="Payables_Turnover_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Payable Net_Credit_Purchases</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Asset_Turnover_Ratio">
+			<state id="Low" />
+			<state id="High" />
+			<parents>Revenue Total_Liability</parents>
+			<probabilities>0.26 0.74 0.98 0.02 0.02 0.98 0.26 0.74</probabilities>
+		</cpt>
+		<cpt id="Profitability_Ratios">
+			<state id="Unfavourable" />
+			<state id="Favourable" />
+			<parents>ROA ROE Profit_Margin</parents>
+			<probabilities>0.98 0.02000000000000002 0.451 0.549 0.451 0.549 0.235 0.765 0.451 0.549 0.235 0.765 0.235 0.765 0.01900000000000002 0.981</probabilities>
+		</cpt>
+		<cpt id="Liquidity_Ratio">
+			<state id="Unfavourable" />
+			<state id="Favourable" />
+			<parents>Current_Ratio Quick_Ratio Cash_Ratio</parents>
+			<probabilities>0.98 0.02 0.451 0.549 0.451 0.549 0.235 0.765 0.451 0.549 0.235 0.765 0.235 0.765 0.019 0.981</probabilities>
+		</cpt>
+		<cpt id="Leverage_Ratio">
+			<state id="Unfavourable" />
+			<state id="Favourable" />
+			<parents>Debt_Ratio Interest_Coverage_Ratio</parents>
+			<probabilities>0.74 0.26 0.02 0.98 0.98 0.02 0.74 0.26</probabilities>
+		</cpt>
+		<cpt id="Economic_conditions">
+			<state id="Bad" />
+			<state id="Good" />
+			<probabilities>0.77 0.23</probabilities>
+		</cpt>
+		<cpt id="Competition">
+			<state id="Not_fierce" />
+			<state id="Fierce" />
+			<probabilities>0.39 0.61</probabilities>
+		</cpt>
+		<cpt id="Environment">
+			<state id="Unfavourable" />
+			<state id="Favourable" />
+			<parents>Economic_conditions Competition</parents>
+			<probabilities>0.26 0.74 0.98 0.02 0.02 0.98 0.26 0.74</probabilities>
+		</cpt>
+		<cpt id="Activity_Ratios">
+			<state id="Unfavourable" />
+			<state id="Favourable" />
+			<parents>Inventory_Turnover_Ratio Payables_Turnover_Ratio Asset_Turnover_Ratio</parents>
+			<probabilities>0.98 0.02 0.451 0.549 0.451 0.549 0.235 0.765 0.451 0.549 0.235 0.765 0.235 0.765 0.019 0.981</probabilities>
+		</cpt>
+		<cpt id="Failure_of_Retailer">
+			<state id="Negative" />
+			<state id="Positive" />
+			<parents>Profitability_Ratios Liquidity_Ratio Leverage_Ratio Environment Activity_Ratios</parents>
+			<probabilities>0.98 0.02 0.644 0.356 0.644 0.356 0.488 0.512 0.644 0.356 0.488 0.512 0.488 0.512 0.332 0.668 0.644 0.356 0.488 0.512 0.488 0.512 0.332 0.668 0.488 0.512 0.332 0.668 0.332 0.668 0.176 0.824 0.644 0.356 0.488 0.512 0.488 0.512 0.332 0.668 0.488 0.512 0.332 0.668 0.332 0.668 0.2025 0.7975 0.488 0.512 0.332 0.668 0.332 0.668 0.176 0.824 0.332 0.668 0.176 0.824 0.176 0.824 0.02000000000000002 0.98</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2423.0 ACADEMIC" name="Network1">
+			<node id="Debt_Ratio">
+				<name>Debt Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>318 384 412 438</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Revenue">
+				<name>Revenue</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>46 289 102 324</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Cash_Flow">
+				<name>Cash Flow</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>697 89 759 127</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Current_Asset">
+				<name>Current Asset</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>232 78 308 125</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Current_Liability">
+				<name>Current Liability</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>388 83 468 133</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Current_Ratio">
+				<name>Current Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>322 185 393 229</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Liquid_Assets">
+				<name>Liquid Assets</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>539 90 612 135</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Quick_Ratio">
+				<name>Quick Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>489 190 551 228</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Payable">
+				<name>Payable</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1242 304 1296 337</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Equity">
+				<name>Equity</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>664 303 710 331</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Total_Assets">
+				<name>Total Assets</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>502 295 570 337</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Net_Income">
+				<name>Net Income</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>801 301 875 338</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="ROA">
+				<name>ROA</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>487 410 529 436</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="ROE">
+				<name>ROE</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>632 413 670 436</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Profit">
+				<name>Profit</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>206 299 249 325</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Profit_Margin">
+				<name>Profit Margin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>28 389 127 430</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Cash_Ratio">
+				<name>Cash Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>642 188 708 229</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Total_Liability">
+				<name>Total Liability</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>356 291 429 336</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Interest_Coverage_Ratio">
+				<name>Interest Coverage Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>751 396 843 453</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="EBIT">
+				<name>EBIT</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>993 89 1034 114</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Interest_Expense">
+				<name>Interest Expense</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>820 78 911 134</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Cost_of_Sales">
+				<name>Cost of Sales</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1085 300 1161 347</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Inventory_Turnover_Ratio">
+				<name>Inventory Turnover Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>895 399 986 455</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Inventory">
+				<name>Inventory</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>959 309 1018 345</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Net_Credit_Purchases">
+				<name>Net Credit Purchases</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1364 300 1443 349</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Payables_Turnover_Ratio">
+				<name>Payables Turnover Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1039 402 1130 458</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Asset_Turnover_Ratio">
+				<name>Asset Turnover Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>178 389 269 445</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Profitability_Ratios">
+				<name>Profitability Ratios</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>229 509 324 568</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Failure_of_Retailer">
+				<name>Failure of Retailer</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>644 640 840 683</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Liquidity_Ratio">
+				<name>Liquidity Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>411 513 517 565</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Leverage_Ratio">
+				<name>Leverage Ratio</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>594 527 678 579</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Activity_Ratios">
+				<name>Activity Ratios</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>774 513 854 563</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Economic_conditions">
+				<name>Economic conditions</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1177 400 1285 467</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Environment">
+				<name>Environment</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>943 515 1014 559</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Competition">
+				<name>Competition</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1335 429 1403 471</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
